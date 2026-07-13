@@ -21,6 +21,7 @@
   --header-blur: 14px;
   --page-scale: 1;
   --header-mobile-scale: 1;
+  --page-visible-width: 1560px;
 }
 
 *,
@@ -62,8 +63,6 @@ button {
   cursor: pointer;
 }
 
-/* SCALE */
-
 .page-scale-shell {
   width: 100%;
   overflow-x: hidden;
@@ -71,7 +70,7 @@ button {
 
 .page-scale-stage {
   position: relative;
-  width: calc(var(--layout-width) * var(--page-scale));
+  width: var(--page-visible-width);
   height: calc((var(--layout-height) + var(--footer-height)) * var(--page-scale));
   margin: 0 auto;
   overflow: hidden;
@@ -92,8 +91,6 @@ button {
   width: var(--layout-width);
   background: var(--page-bg);
 }
-
-/* HEADER */
 
 .site-header {
   position: absolute;
@@ -225,8 +222,6 @@ button {
   display: flex;
 }
 
-/* MAIN */
-
 .landing-main {
   position: relative;
   width: var(--layout-width);
@@ -307,8 +302,6 @@ button {
   background: transparent;
 }
 
-/* FOOTER */
-
 .site-footer {
   position: relative;
   width: var(--layout-width);
@@ -322,8 +315,6 @@ button {
   width: 1560px;
   height: 100px;
 }
-
-/* REVEAL */
 
 .reveal {
   opacity: 0;
@@ -374,8 +365,6 @@ button {
   }
 }
 
-/* A5 */
-
 .playful-a5.is-visible {
   animation: a5Entrance 1400ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
 }
@@ -424,12 +413,11 @@ button {
   }
 }
 
-/* RESPONSIVE SCALE */
-
 @media (max-width: 1559px) {
   :root {
     --page-scale: calc(100vw / 1560);
     --header-mobile-scale: 2;
+    --page-visible-width: 1560px;
   }
 
   .site-nav {
@@ -447,8 +435,6 @@ button {
     height: calc(var(--layout-height) + var(--footer-height));
   }
 }
-
-/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   html {
