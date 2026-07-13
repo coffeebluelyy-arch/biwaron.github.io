@@ -37,6 +37,7 @@ if (wiggleItem) {
   };
 
   wiggleItem.addEventListener('mouseenter', triggerFunnyAnimation);
+
   wiggleItem.addEventListener('animationend', (event) => {
     if (event.animationName === 'wiggleSoft') {
       wiggleItem.classList.remove('is-wiggling');
