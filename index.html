@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+  <title>Landingpage</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="page-scale-shell">
+    <div class="page-scale-stage">
+      <div class="page-scale-frame">
+        <div class="page-landing">
+          <header class="site-header" aria-label="Hauptnavigation">
+            <div class="site-header-scale">
+              <div class="site-header__inner">
+                <a class="site-logo-link" href="./index.html" aria-label="Zur Landingpage">
+                  <img class="site-logo" src="./images/logo_weiss.png" alt="">
+                </a>
+
+                <nav class="site-nav" aria-label="Primäre Navigation">
+                  <a href="./about/index.html">ABOUT</a>
+                  <a href="./textilsystem/index.html">TEXTILSYSTEM</a>
+                  <a href="./forschung/index.html">FORSCHUNG</a>
+                  <a href="./transformation/index.html">TRANSFORMATION</a>
+                  <a href="./aktivitaet/index.html">AKTIVITÄT-&gt;</a>
+                </nav>
+
+                <button
+                  class="menu-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu"
+                  aria-label="Navigation öffnen"
+                >
+                  <img class="menu-toggle__icon" src="./images/burger_weiss.png" alt="">
+                </button>
+
+                <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile Navigation">
+                  <a href="./about/index.html">ABOUT</a>
+                  <a href="./textilsystem/index.html">TEXTILSYSTEM</a>
+                  <a href="./forschung/index.html">FORSCHUNG</a>
+                  <a href="./transformation/index.html">TRANSFORMATION</a>
+                  <a href="./aktivitaet/index.html">AKTIVITÄT-&gt;</a>
+                </nav>
+              </div>
+            </div>
+          </header>
+
+          <main class="landing-main">
+            <section class="landing-stage" aria-label="Landingpage Bildkomposition">
+              <img class="stage-image stage-image--a1" src="./images/A_1.png" alt="" loading="eager">
+              <img class="stage-image stage-image--a2 reveal reveal-up" src="./images/A_2.png" alt="" loading="eager">
+              <img class="stage-image stage-image--a3 reveal reveal-diagonal reveal-delay-1" src="./images/A_3.png" alt="" loading="lazy">
+              <img class="stage-image stage-image--a4 reveal reveal-diagonal reveal-delay-2" src="./images/A_4.png" alt="" loading="lazy">
+
+              <div class="stage-a5 playful-a5">
+                <img class="stage-image stage-image--a5 wiggle-hover" src="./images/A_5.png" alt="" loading="lazy">
+              </div>
+
+              <a
+                class="landing-hitarea landing-hitarea--about"
+                href="./about/index.html"
+                aria-label="Zur About-Seite"
+              ></a>
+            </section>
+          </main>
+
+          <footer class="site-footer" aria-hidden="true">
+            <img class="site-footer__image" src="./images/footer_box.png" alt="" loading="lazy">
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
